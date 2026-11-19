@@ -75,9 +75,9 @@ html, body {
 }
 
 .brand-logo {
-  height: clamp(30px, 4.8vh, 42px);
+  height: clamp(38px, 5.8vh, 52px);
   width: auto;
-  max-width: 82%;
+  max-width: 88%;
   object-fit: contain;
   display: block;
 }

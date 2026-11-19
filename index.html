@@ -27,9 +27,9 @@
   <!-- Full Viewport Mobile Card Container (Strictly 1 view, 0 scroll, 0 slide) -->
   <main class="card-wrapper" id="cardContainer">
     
-    <!-- Top Header: Silverwings Gold Wing & Wordmark -->
+    <!-- Top Header: Silverwings Blue Logo -->
     <header class="header-section">
-      <img src="assets/silverwings-logo-transparent.png" alt="Silverwings Hotel Consultancy" class="brand-logo">
+      <img src="assets/silverwings-blue-logo.png" alt="Silverwings Hotel Consultancy" class="brand-logo">
     </header>
 
     <!-- Circular Profile Photo (Clean, no border, generous size) -->
@@ -71,26 +71,7 @@
         </button>
       </div>
 
-      <!-- 2. Email Card -->
-      <div class="contact-card" role="button" tabindex="0" onclick="handleCardClick('mailto:silverwingsideas@gmail.com')">
-        <div class="card-icon-col">
-          <svg class="brand-blue-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </div>
-        <div class="card-content-col single-line">
-          <span class="card-primary-text">silverwingsideas@gmail.com</span>
-        </div>
-        <button class="card-action-btn" title="Copy Email Address" onclick="copyText(event, 'silverwingsideas@gmail.com', 'Email copied!')" aria-label="Copy email address">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- 3. Website Card -->
+      <!-- 2. Website Card (Placed immediately after Mobile Number) -->
       <a class="contact-card" href="https://www.silverwingsideas.com" target="_blank" rel="noopener noreferrer">
         <div class="card-icon-col">
           <svg class="brand-blue-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -110,6 +91,25 @@
           </svg>
         </div>
       </a>
+
+      <!-- 3. Email Card (Placed after Website) -->
+      <div class="contact-card" role="button" tabindex="0" onclick="handleCardClick('mailto:silverwingsideas@gmail.com')">
+        <div class="card-icon-col">
+          <svg class="brand-blue-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <div class="card-content-col single-line">
+          <span class="card-primary-text">silverwingsideas@gmail.com</span>
+        </div>
+        <button class="card-action-btn" title="Copy Email Address" onclick="copyText(event, 'silverwingsideas@gmail.com', 'Email copied!')" aria-label="Copy email address">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </button>
+      </div>
 
       <!-- 4. Office Address Card (Direct address, no 'Office Address' label) -->
       <a class="contact-card address-card" href="https://maps.google.com/?q=Chowallur+Tower,+Westfort,+Thrissur,+Kerala+680004" target="_blank" rel="noopener noreferrer">

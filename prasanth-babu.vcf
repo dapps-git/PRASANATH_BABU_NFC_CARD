@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Babu;Prasanth;;;
+FN:Prasanth Babu
+ORG:Silverwings Hotel Consultancy
+TITLE:Founder & CEO
+TEL;TYPE=CELL,VOICE:+919446443221
+EMAIL;TYPE=WORK,INTERNET:silverwingsideas@gmail.com
+URL;TYPE=WORK:https://www.silverwingsideas.com
+ADR;TYPE=WORK:;;Chowallur Tower\, 5th Floor\, Westfort;Thrissur;Kerala;680004;India
+LABEL;TYPE=WORK:Chowallur Tower\, 5th Floor\, Westfort\, Thrissur – 680004\, Kerala\, India
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/silverwings_ideas/
+X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/share/18bddLjtPb/
+NOTE:SILVERWINGS HOTEL CONSULTANCY - Hotel Consultant
+END:VCARD
+

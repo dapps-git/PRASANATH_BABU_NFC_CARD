@@ -1,0 +1,367 @@
+/* ==========================================================================
+   PRASANTH BABU - NFC DIGITAL BUSINESS CARD
+   Designed to fit 100% in one mobile view without scrolling or sliding.
+   ========================================================================== */
+
+:root {
+  --bg-color: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #e2e4e8;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  --text-main: #141414;
+  --text-muted: #5e646d;
+  --gold-accent: #b38435;
+  --gold-accent-light: #d6a858;
+  --gold-accent-dark: #8c6322;
+  
+  /* Brand Blue Palette */
+  --icon-blue: #011949;
+  --action-blue: #011949;
+  --brand-navy: #011949;
+  --brand-navy-light: #04215f;
+  
+  --font-serif: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-italic-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden; /* Strict: absolutely no scroll, no slide */
+  background-color: #f7f8fa;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Central Mobile Container */
+.card-wrapper {
+  width: 100%;
+  max-width: 430px;
+  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(6px, 1.4vh, 12px) clamp(16px, 4.5vw, 24px) clamp(6px, 1.2vh, 10px);
+  overflow: hidden; /* Fixed single view */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* ==========================================================================
+   1. Brand Logo Header
+   ========================================================================== */
+.header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: clamp(2px, 0.4vh, 4px);
+}
+
+.brand-logo {
+  height: clamp(30px, 4.8vh, 42px);
+  width: auto;
+  max-width: 82%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ==========================================================================
+   2. Profile Avatar (Increased Size + Small gap after photo)
+   ========================================================================== */
+.avatar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: clamp(2px, 0.4vh, 5px);
+  margin-bottom: clamp(8px, 1.4vh, 12px);
+}
+
+.avatar-container {
+  width: clamp(134px, 21vh, 175px); /* Increased image size */
+  height: clamp(134px, 21vh, 175px);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* ==========================================================================
+   3. Identity (Name & Title)
+   ========================================================================== */
+.identity-section {
+  text-align: center;
+  flex-shrink: 0;
+  margin-bottom: clamp(8px, 1.5vh, 14px);
+}
+
+.person-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.08rem, 2.4vh, 1.36rem);
+  font-weight: 700;
+  letter-spacing: clamp(1px, 0.3vw, 1.8px);
+  color: #111111;
+  line-height: 1.15;
+  margin-bottom: clamp(2px, 0.35vh, 4px);
+}
+
+.person-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gold-line {
+  display: inline-block;
+  width: clamp(20px, 5vw, 36px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(179, 132, 53, 0.1), #b38435, rgba(179, 132, 53, 0.1));
+}
+
+.person-title {
+  font-family: var(--font-italic-serif);
+  font-style: italic;
+  font-size: clamp(0.85rem, 1.75vh, 1.05rem);
+  font-weight: 600;
+  color: var(--gold-accent);
+  letter-spacing: 0.4px;
+}
+
+.person-company {
+  font-family: var(--font-sans);
+  font-size: clamp(0.62rem, 1.15vh, 0.72rem);
+  font-weight: 700;
+  color: var(--brand-navy);
+  letter-spacing: clamp(1px, 0.25vw, 1.6px);
+  text-transform: uppercase;
+  margin-top: clamp(2px, 0.3vh, 4px);
+}
+
+/* ==========================================================================
+   4. Contact Links / Cards (Strictly reduced tight gaps between boxes)
+   ========================================================================== */
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* True tight reduced gap between boxes */
+  flex-shrink: 0;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px; /* Sleek reduced border radius */
+  padding: clamp(3px, 0.6vh, 5px) clamp(10px, 2.5vw, 14px);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.16s ease-in-out;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  user-select: none;
+  min-height: clamp(34px, 5vh, 40px);
+}
+
+.contact-card.address-card {
+  min-height: clamp(38px, 5.8vh, 44px);
+  padding-top: clamp(2px, 0.45vh, 4px);
+  padding-bottom: clamp(2px, 0.45vh, 4px);
+}
+
+.contact-card:hover, .contact-card:focus-visible {
+  border-color: #9cb1d6;
+  box-shadow: 0 2px 8px rgba(1, 25, 73, 0.08);
+  transform: translateY(-1px);
+}
+
+.contact-card:active {
+  transform: scale(0.99);
+  background-color: #fafbfc;
+}
+
+/* Icon Column */
+.card-icon-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(20px, 3vh, 26px);
+  margin-right: clamp(8px, 2.2vw, 12px);
+  flex-shrink: 0;
+}
+
+/* Rich Navy Brand Blue Icons */
+.brand-blue-icon {
+  width: clamp(15px, 2.1vh, 18px);
+  height: clamp(15px, 2.1vh, 18px);
+  color: var(--icon-blue);
+  display: block;
+}
+
+/* Text Content Column */
+.card-content-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-align: left;
+}
+
+.card-content-col.single-line {
+  line-height: 1.2;
+}
+
+.card-primary-text {
+  font-size: clamp(0.72rem, 1.42vh, 0.84rem);
+  font-weight: 500;
+  color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.15px;
+}
+
+/* Address Card specific lines */
+.card-address-line1 {
+  font-size: clamp(0.66rem, 1.28vh, 0.76rem);
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.18;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-address-line2 {
+  font-size: clamp(0.58rem, 1.1vh, 0.68rem);
+  font-weight: 400;
+  color: #555c66;
+  line-height: 1.18;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action Button / Icon (Right - Navy Blue) */
+.card-action-btn {
+  background: none;
+  border: none;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--action-blue);
+  flex-shrink: 0;
+  margin-left: 6px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.card-action-btn svg {
+  width: clamp(13px, 1.85vh, 16px);
+  height: clamp(13px, 1.85vh, 16px);
+  stroke: var(--action-blue);
+}
+
+.card-action-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(1, 25, 73, 0.06);
+}
+
+/* ==========================================================================
+   5. Bottom Dark Blue Brand Footer Section
+   ========================================================================== */
+.bottom-brand-footer {
+  background: linear-gradient(135deg, #011949 0%, #03205b 100%);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(5px, 0.8vh, 8px) 14px;
+  margin-top: clamp(4px, 0.7vh, 8px);
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(1, 25, 73, 0.18);
+}
+
+.footer-brand-logo {
+  height: clamp(22px, 3.8vh, 30px);
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ==========================================================================
+   Toast Notification
+   ========================================================================== */
+.toast-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background: rgba(1, 25, 73, 0.94);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  z-index: 999;
+}
+
+.toast-message.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Desktop / Tablet presentation frame
+   ========================================================================== */
+@media (min-width: 600px) {
+  body {
+    background: radial-gradient(circle at 50% 30%, #f6f3eb 0%, #e6e2d8 100%);
+    padding: 20px;
+  }
+
+  .card-wrapper {
+    height: 94vh;
+    max-height: 860px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 25px 60px -15px rgba(50, 40, 25, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  }
+}
